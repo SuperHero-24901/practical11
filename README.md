@@ -1,16 +1,33 @@
-# React + Vite
+# RouteFlow — React Router Navigation
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Aim
+Routeflow — a React practical built with Vite, React, React Router DOM where relevant, and Tailwind CSS v4.
 
-Currently, two official plugins are available:
+## Concepts used
+- React functional components and JSX
+- Component-based UI and responsive utility-first styling
+- React Router DOM
+- Form state, validation, and interactive feedback where relevant
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Requirements
+- Node.js 20.19+ or 22.12+ recommended
+- npm
 
-## React Compiler
+## Run the project
+```bash
+npm install
+npm run dev
+```
+Open the local URL printed by Vite.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Production build
+```bash
+npm run build
+npm run preview
+```
 
-## Expanding the ESLint configuration
+Each practical is independent. Open its folder in VS Code and run the commands from that folder.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## How client-side navigation works
+`BrowserRouter` listens to browser history changes. `Link` and `NavLink` update the URL and render the matching `Route` without requesting a full new HTML page. `NavLink` exposes an active state, which is used to highlight the current page.
